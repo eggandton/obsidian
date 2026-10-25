@@ -1,0 +1,211 @@
+/* Hover action buttons injected into File Explorer rows (files & folders). */
+
+/* Anchor for the absolutely-positioned button group. */
+.nav-file-title,
+.nav-folder-title {
+	position: relative;
+}
+
+/*
+ * The button group floats over the right edge of the row instead of sitting in
+ * the flex flow, so it never changes the row's height or width — the row keeps
+ * its native size while buttons stay comfortably clickable. z-index keeps the
+ * buttons above the filename text so clicks always land on the buttons.
+ */
+.cfm-actions {
+	position: absolute;
+	top: 0;
+	right: 4px;
+	bottom: 0;
+	z-index: 1;
+	display: none;
+	align-items: center;
+	gap: 2px;
+}
+
+/* Reveal the buttons only when the row is hovered (highlighted). */
+.nav-file-title:hover .cfm-actions,
+.nav-folder-title:hover .cfm-actions {
+	display: flex;
+}
+
+/*
+ * On hover, reserve room on the right of the filename so it truncates with an
+ * ellipsis BEFORE the buttons — text and buttons never overlap. The button
+ * count is set when a row's actions are injected.
+ */
+.nav-file-title:hover .nav-file-title-content,
+.nav-folder-title:hover .nav-folder-title-content {
+	padding-right: calc(10px + var(--cfm-action-count, 2) * 24px);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.cfm-action-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 22px;
+	height: 22px;
+	padding: 3px;
+	border: none;
+	border-radius: 4px;
+	background: transparent;
+	box-shadow: none;
+	color: var(--text-muted);
+	cursor: pointer;
+}
+
+.cfm-action-btn:hover {
+	background: var(--background-modifier-hover);
+	color: var(--text-normal);
+}
+
+.cfm-action-btn svg {
+	width: 15px;
+	height: 15px;
+}
+
+/* Per-item action matrix in the plugin settings tab. */
+.cfm-settings-matrix-wrap {
+	max-width: 100%;
+	overflow-x: auto;
+	border-top: 1px solid var(--background-modifier-border);
+	border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.cfm-settings-matrix {
+	width: 100%;
+	min-width: 720px;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+.cfm-settings-matrix th,
+.cfm-settings-matrix td {
+	height: 52px;
+	padding: 6px 8px;
+	border-bottom: 1px solid var(--background-modifier-border);
+	text-align: center;
+	vertical-align: middle;
+}
+
+.cfm-settings-matrix tr:last-child th,
+.cfm-settings-matrix tr:last-child td {
+	border-bottom: none;
+}
+
+.cfm-settings-matrix thead th {
+	background: var(--background-secondary);
+	color: var(--text-normal);
+	font-size: var(--font-ui-smaller);
+	font-weight: var(--font-semibold);
+}
+
+.cfm-settings-matrix th:first-child {
+	position: sticky;
+	left: 0;
+	z-index: 1;
+	width: 176px;
+	background: var(--background-primary);
+	text-align: left;
+}
+
+.cfm-settings-matrix thead th:first-child {
+	z-index: 2;
+	background: var(--background-secondary);
+}
+
+.cfm-settings-matrix tbody th {
+	font-size: var(--font-ui-small);
+	font-weight: var(--font-medium);
+}
+
+.cfm-settings-matrix-heading {
+	min-height: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1.25;
+}
+
+.cfm-settings-checkbox-hitbox {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	touch-action: manipulation;
+}
+
+.cfm-settings-checkbox-hitbox input {
+	width: 16px;
+	height: 16px;
+	margin: 0;
+	accent-color: var(--interactive-accent);
+	cursor: pointer;
+}
+
+.cfm-settings-checkbox-hitbox input:focus-visible {
+	outline: 2px solid var(--interactive-accent);
+	outline-offset: 3px;
+}
+
+.cfm-settings-checkbox-hitbox:has(input:disabled) {
+	cursor: not-allowed;
+}
+
+.cfm-settings-checkbox-hitbox input:disabled {
+	cursor: not-allowed;
+	opacity: 0.45;
+}
+
+.cfm-settings-unavailable {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	color: var(--text-faint);
+	font-size: var(--font-ui-medium);
+}
+
+.cfm-settings-platform-note {
+	margin-top: 10px;
+	color: var(--text-muted);
+	font-size: var(--font-ui-smaller);
+	line-height: var(--line-height-tight);
+}
+
+.workspace-leaf-content[data-type="markdown"] .view-content {
+	position: relative;
+}
+
+.cfm-editor-copy-btn {
+	position: absolute;
+	z-index: 20;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 28px;
+	height: 28px;
+	padding: 5px;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 6px;
+	background: var(--background-primary);
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+	color: var(--text-muted);
+	cursor: pointer;
+}
+
+.cfm-editor-copy-btn:hover {
+	background: var(--background-modifier-hover);
+	color: var(--text-normal);
+}
+
+.cfm-editor-copy-btn svg {
+	width: 16px;
+	height: 16px;
+}
