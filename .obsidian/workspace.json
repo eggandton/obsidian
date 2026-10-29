@@ -11,10 +11,14 @@
             "id": "9057ba17fdcba0cc",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "type": "markdown",
+              "state": {
+                "file": "plugin/macSystem/Mac-SSH-使用手册.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Mac-SSH-使用手册"
             }
           }
         ]
@@ -79,7 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 446.65234375
   },
   "right": {
     "id": "f141e64aec1134c1",
@@ -95,6 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "task/vps/openspec/changes/deploy-personal-reality-proxy/proposal.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,6 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "task/vps/openspec/changes/deploy-personal-reality-proxy/proposal.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
@@ -155,6 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "plugin/macSystem/Mac-SSH-使用手册.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -178,7 +185,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 451.75
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -195,8 +202,28 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9057ba17fdcba0cc",
+  "active": "46800432b87c1dc6",
   "lastOpenFiles": [
+    "plugin/macSystem/install-ssh-tools-v2.sh",
+    "未命名.canvas",
+    "task/vps/exports/Malaysia-VLESS.txt",
+    "task/vps/exports/Malaysia-Proxy.yaml",
+    "task/vps/exports/Import-Instructions.txt",
+    "task/vps/exports",
+    "task/vps/README.md",
+    "task/vps/scripts/configure-bbr.py",
+    "task/vps/openspec/changes/deploy-personal-reality-proxy/tasks.md",
+    "task/vps/scripts/ssh-alivps.sh",
+    "task/vps/openspec/config.yaml",
+    "task/vps/openspec/changes/deploy-personal-reality-proxy/proposal.md",
+    "task/vps/openspec/changes/deploy-personal-reality-proxy/design.md",
+    "task/vps.md",
+    "task/vps/scripts/__pycache__/verify-client.cpython-312.pyc",
+    "task/vps/scripts/__pycache__/install-server.cpython-312.pyc",
+    "task/vps/scripts/__pycache__/generate-client.cpython-312.pyc",
+    "task/vps/openspec/changes/deploy-personal-reality-proxy/specs/personal-proxy/spec.md",
+    "task/Untitled.md",
+    "plugin/macSystem/Mac-SSH-使用手册.md",
     "未命名.md",
     "README.md"
   ]
