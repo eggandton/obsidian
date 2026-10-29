@@ -11,6 +11,22 @@
 
 配置路径：`/Users/zhangqiliang/project/task/vps/.private/malaysia-clash-verge.yaml`。
 
+### 全局模式与 GitHub 拉取/推送
+
+Clash Verge Rev 首页「代理模式」可切换「规则 / 全局 / 直连」。使用全局模式时，`GLOBAL` 组应选择 `PROXY`（其下为 `MY-Private-REALITY`）；如果选择 `DIRECT`，即使切到全局也仍然直连。全局模式仍只处理进入 Clash 的连接，终端 Git 不会自动遵循 macOS 系统代理。
+
+2026-10-29 已复现终端 Git 直连 GitHub 超时，而通过本地 `7897` 代理可以访问。另在推送预检查中遇到 `Error in the HTTP2 framing layer`，使用 HTTP/1.1 后通过。已在本机 Git 全局配置中按 GitHub 域名限定以下设置，规则模式下也可使用：
+
+```sh
+git config --global http.https://github.com.proxy http://127.0.0.1:7897
+git config --global http.https://github.com.version HTTP/1.1
+git config --global http.https://gist.github.com.proxy http://127.0.0.1:7897
+```
+
+以上适用于 HTTPS 仓库地址，需要 Clash 正在运行且混合端口保持 `7897`。`git@github.com:...` 的 SSH 地址需另行配置 SSH 代理，HTTP 代理设置不会作用于 SSH。全局模式已验证出口为 `47.254.202.53`、MY；检查后恢复规则模式，并保留 `GLOBAL → PROXY` 选择。
+
+撤销上述 Git 设置可分别运行对应的 `git config --global --unset`，例如 `git config --global --unset http.https://github.com.proxy`。修改前的 Git 配置和 Clash 配置备份保存在 `.private/github-proxy-backup-20261029-103817/`。
+
 其他兼容客户端可使用 `.private/vless-import.txt`，但需支持服务端要求的 X25519MLKEM768 握手。Clash Verge Rev 请优先导入完整 YAML：其中的 `reality-opts.support-x25519mlkem768: true` 是本部署的必要兼容选项，单独导入 URI 可能丢失此设置。这些文件含访问凭据，仅保存在权限受限、已被 Git 忽略的目录中；不应上传到公开订阅服务。服务端 REALITY 私钥没有导出到本机。
 
 ## 分流与 DNS
