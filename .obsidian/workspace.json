@@ -13,12 +13,21 @@
             "state": {
               "type": "markdown",
               "state": {
+<<<<<<< HEAD
                 "file": "plugin/macSystem/Mac-SSH-使用手册.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "Mac-SSH-使用手册"
+=======
+                "file": "开发工作流设计草案.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "开发工作流设计草案"
+>>>>>>> origin/main
             }
           }
         ]
@@ -225,6 +234,40 @@
     "task/Untitled.md",
     "plugin/macSystem/Mac-SSH-使用手册.md",
     "未命名.md",
-    "README.md"
+    "开发工作流设计草案.md",
+    "新建文件夹",
+    "skills/thinking-via-negativa/SKILL.md",
+    "skills/thinking-via-negativa",
+    "skills/thinking-triz/SKILL.md",
+    "skills/thinking-triz",
+    "skills/thinking-thought-experiment/SKILL.md",
+    "skills/thinking-thought-experiment",
+    "skills/thinking-theory-of-constraints/SKILL.md",
+    "skills/thinking-theory-of-constraints",
+    "skills/thinking-systems/SKILL.md",
+    "skills/thinking-systems",
+    "skills/thinking-steel-manning/SKILL.md",
+    "skills/thinking-steel-manning",
+    "skills/thinking-socratic/SKILL.md",
+    "skills/thinking-socratic",
+    "skills/thinking-second-order/SKILL.md",
+    "skills/thinking-second-order",
+    "skills/thinking-scientific-method/SKILL.md",
+    "skills/thinking-scientific-method",
+    "skills/thinking-reversibility/SKILL.md",
+    "skills/thinking-red-team/SKILL.md",
+    "skills/thinking-probabilistic/SKILL.md",
+    "skills/thinking-pre-mortem/SKILL.md",
+    "skills/thinking-opportunity-cost/SKILL.md",
+    "skills/thinking-ooda/SKILL.md",
+    "skills/thinking-model-router/SKILL.md",
+    "skills/thinking-model-combination/SKILL.md",
+    "skills/thinking-margin-of-safety/SKILL.md",
+    "skills/thinking-map-territory/SKILL.md",
+    "skills/thinking-lindy-effect/SKILL.md",
+    "skills/thinking-kepner-tregoe/SKILL.md",
+    "skills/thinking-jobs-to-be-done/SKILL.md",
+    "skills/thinking-five-whys-plus/SKILL.md",
+    "skills/thinking-first-principles/SKILL.md"
   ]
 }
